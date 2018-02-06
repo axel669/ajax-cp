@@ -2,10 +2,11 @@
   "name": "ajaxp",
   "version": "0.1.0",
   "description": "small promise-based ajax library with a reasonable (hopefully) cancel mechanic",
-  "main": "ajaxp.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel source/ajaxp.es6.js -o ajaxp.js"
+    "build": "babel src/ajaxp.es6.js -o index.js",
+    "copy": "copy src\\ajaxp.es6.js es6\\index.js",
+    "build+copy": "run-p build copy"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   "homepage": "https://github.com/axel669/ajaxp#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
-  }
+    "babel-preset-env": "^1.6.1",
+    "npm-run-all": "^4.1.2"
+  },
+  "dependencies": {}
 }
