@@ -1,5 +1,5 @@
 {
-  "name": "@axel669/ajaxp",
+  "name": "ajax-cp",
   "version": "0.1.0",
   "description": "small promise-based ajax library with a reasonable (hopefully) cancel mechanic",
   "main": "index.js",
