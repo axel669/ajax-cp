@@ -6,7 +6,9 @@
   "scripts": {
     "build": "babel src/ajaxp.es6.js -o index.js",
     "copy": "copy src\\ajaxp.es6.js es6\\index.js",
-    "build+copy": "run-p build copy"
+    "build+copy": "run-p build copy",
+    "minify": "uglifyjs index.js -o min\\index.js",
+    "release": "run-s build+copy minify"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "npm-run-all": "^4.1.2"
+    "npm-run-all": "^4.1.2",
+    "uglify-js": "^3.3.9"
   },
   "dependencies": {}
 }

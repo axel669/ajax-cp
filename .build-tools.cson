@@ -4,8 +4,8 @@ providers: [
     config:
       commands: [
         {
-          project: "C:\\Users\\cmorgan2\\Documents\\programming\\github\\ajaxp"
-          source: "C:\\Users\\cmorgan2\\Documents\\programming\\github\\ajaxp\\.build-tools.cson"
+          project: "C:\\Users\\Axel\\Documents\\programming\\github\\ajaxp"
+          source: "C:\\Users\\Axel\\Documents\\programming\\github\\ajaxp\\.build-tools.cson"
           name: "Build"
           command: "npm run build"
           wd: "."
@@ -29,10 +29,35 @@ providers: [
           version: 2
         }
         {
-          project: "C:\\Users\\cmorgan2\\Documents\\programming\\github\\ajaxp"
-          source: "C:\\Users\\cmorgan2\\Documents\\programming\\github\\ajaxp\\.build-tools.cson"
+          project: "C:\\Users\\Axel\\Documents\\programming\\github\\ajaxp"
+          source: "C:\\Users\\Axel\\Documents\\programming\\github\\ajaxp\\.build-tools.cson"
           name: "Build + Copy"
           command: "npm run build+copy"
+          wd: "."
+          env: {}
+          modifier:
+            save_all: {}
+          environment:
+            name: "child_process"
+            config:
+              stdoe: "both"
+          stdout:
+            pipeline: []
+          stderr:
+            pipeline: []
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              colors: false
+              stdin: false
+          version: 2
+        }
+        {
+          project: "C:\\Users\\Axel\\Documents\\programming\\github\\ajaxp"
+          source: "C:\\Users\\Axel\\Documents\\programming\\github\\ajaxp\\.build-tools.cson"
+          name: "Prep Release"
+          command: "npm run release"
           wd: "."
           env: {}
           modifier:
