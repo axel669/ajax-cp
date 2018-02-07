@@ -1,5 +1,5 @@
 (() => {
-    const ajaxp = (url, options) => {
+    const ajaxcp = (url, options) => {
         const requestObj = new XMLHttpRequest();
         const request = new Promise(
             (resolve, reject) => {
@@ -8,7 +8,6 @@
                     timeout = 0,
                     type = null,
                     onProgress = () => {},
-                    token = null,
                     post = null
                 } = (options || {});
                 let postData = null;
@@ -86,9 +85,9 @@
     };
 
     if (typeof window !== 'undefined') {
-        window.ajaxp = ajaxp;
+        window.ajaxcp = ajaxcp;
     }
     if (typeof module !== 'undefined') {
-        module.exports = ajaxp;
+        module.exports = ajaxcp;
     }
 })();

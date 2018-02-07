@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-    var ajaxp = function ajaxp(url, options) {
+    var ajaxcp = function ajaxcp(url, options) {
         var requestObj = new XMLHttpRequest();
         var request = new Promise(function (resolve, reject) {
             var _ref = options || {},
@@ -13,8 +13,6 @@
                 type = _ref$type === undefined ? null : _ref$type,
                 _ref$onProgress = _ref.onProgress,
                 onProgress = _ref$onProgress === undefined ? function () {} : _ref$onProgress,
-                _ref$token = _ref.token,
-                token = _ref$token === undefined ? null : _ref$token,
                 _ref$post = _ref.post,
                 post = _ref$post === undefined ? null : _ref$post;
 
@@ -88,9 +86,9 @@
     };
 
     if (typeof window !== 'undefined') {
-        window.ajaxp = ajaxp;
+        window.ajaxcp = ajaxcp;
     }
     if (typeof module !== 'undefined') {
-        module.exports = ajaxp;
+        module.exports = ajaxcp;
     }
 })();
