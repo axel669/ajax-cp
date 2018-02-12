@@ -84,10 +84,10 @@
         };
     };
 
-    if (typeof window !== 'undefined') {
-        window.ajaxcp = ajaxcp;
-    }
     if (typeof module !== 'undefined') {
         module.exports = ajaxcp;
+    }
+    else {
+        window.ajaxcp = ajaxcp;
     }
 })();
